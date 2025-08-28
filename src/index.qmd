@@ -19,7 +19,25 @@ Andrea Seisler \
 ## Meeting time & location {-}
 
 Thursday, 8:00a - 8:50a \
-TBD
+Room 467 Moore Building
+
+## Expectations
+
+- Attend and Participate in all meetings as this is a part of your Grade
+- Attendance Expectations are the same for those who participate in lab for Credit or as a Volunteer.
+- If a meeting will be missed, notify the lab manager PRIOR to missing the meeting by Discord or email or you will be marked as a no show 
+- Check out the meeting minutes on the [Lab Website](https://gilmore-lab.github.io/lab-meetings.html) to see what was missed.
+- Come prepared for the meeting by completing any homework assignments.
+
+## Required Training
+
+- [CITI Training](https://citi.psu.edu/) - every 3 years
+- [Learning Resource Network](https://lrn.psu.edu/) - yearly
+   - [Clery Act Training](https://gilmore-lab.github.io/protocols/training.html#clery-act-training) 
+  - [Reporting Suspected Child Abuse](https://gilmore-lab.github.io/protocols/training.html#reporting-suspected-child-abuse)
+  - [Values, Ethics, & Compliance Training](https://gilmore-lab.github.io/protocols/training.html#values-ethics-and-compliance-training) 
+  - [Title IX Training](https://gilmore-lab.github.io/protocols/training.html#understanding-title-ix-at-penn-state) 
+- Background Check (only if collecting data on minors)
 
 ## References
 
