@@ -1,10 +1,30 @@
 [
   {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "NO MEETING",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "schedule.html#week-01",
+    "href": "schedule.html#week-01",
+    "title": "Schedule",
+    "section": "",
+    "text": "NO MEETING",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
     "objectID": "schedule.html#week-02",
     "href": "schedule.html#week-02",
     "title": "Schedule",
     "section": "Week 02",
-    "text": "Week 02\n\nThu, Sep 04, 2025\n\nAttending\nIntroductions\nFall 2025 Lab Projects (Rick)\n\n\nPlay & Learning Across a Year (PLAY) Project, PLAY site, Parent site, KoBoToolbox Surveys\n\nData Collection Complete April 2025\nLocomotion Coding in Datavyu - Fall 2025\n\n2-3 hours per video\n75 video committment total\n\n\nUpdate Databrary User Guide to Databrary 2.0 using R Studio\nVisual Acuity Project\n\nVisual Acuity Analysis Procedure\nLegacy Project Acuity Data: By Paper\nLegacy Project Data Analysis\n\nDatabrary, especially the Databrary Guide\nRefreshing internal resources, especially the lab website and our lab protocols site.\nDatacamp\n\n\nHomework\n\n\nCreate Discord Account\nCITI Training ASAP - new lab members",
+    "text": "Week 02\n\nThu, Sep 04, 2025\n\nIntroductions\nLab overview\nHomework\nLink to mtg minutes",
     "crumbs": [
       "Schedule"
     ]
@@ -14,7 +34,7 @@
     "href": "schedule.html#week-03",
     "title": "Schedule",
     "section": "Week 03",
-    "text": "Week 03\n\nThu, Sep 11, 2025",
+    "text": "Week 03\n\nThu, Sep 11, 2025\n\nVisual acuity project overview\n\nRead: Neijzen et al. (2025); Gilmore, DiFulvio, Beamer, & Cruz (2025) | poster |",
     "crumbs": [
       "Schedule"
     ]
@@ -24,7 +44,7 @@
     "href": "schedule.html#week-04",
     "title": "Schedule",
     "section": "Week 04",
-    "text": "Week 04\n\nThu, Sep 18, 2025",
+    "text": "Week 04\n\nThu, Sep 18, 2025\n\nPLAY project overview\n\nRead: Soska et al. (2021)\nReview: Soska, Hertzberg, Adolph, Gilmore, & Tamis-Lemonda (n.d.-b); Soska, Hertzberg, Adolph, Gilmore, & Tamis-Lemonda (n.d.-a)",
     "crumbs": [
       "Schedule"
     ]
@@ -34,7 +54,7 @@
     "href": "schedule.html#week-05",
     "title": "Schedule",
     "section": "Week 05",
-    "text": "Week 05\n\nThu, Sep 25, 2025",
+    "text": "Week 05\n\nThu, Sep 25, 2025\n\nDatabrary overview\n\nRead: Gilmore & Adolph (2017), Gilmore, Kennedy, & Adolph (2018)\nReview: Gilmore, Seisler, Soska, Xu, & Liu (2025)",
     "crumbs": [
       "Schedule"
     ]
@@ -54,7 +74,7 @@
     "href": "schedule.html#week-07",
     "title": "Schedule",
     "section": "Week 07",
-    "text": "Week 07\n\nThu, Oct 09, 2025",
+    "text": "Week 07\n\nThu, Oct 09, 2025\n\nOpen scholarship overview",
     "crumbs": [
       "Schedule"
     ]
@@ -64,7 +84,7 @@
     "href": "schedule.html#week-08",
     "title": "Schedule",
     "section": "Week 08",
-    "text": "Week 08\n\nThu, Oct 16, 2025",
+    "text": "Week 08\n\nThu, Oct 16, 2025\n\nBig data developmental neuroscience\n\nReview: HEALthy Brain and Child Development (HBCD) Study",
     "crumbs": [
       "Schedule"
     ]
@@ -150,16 +170,6 @@
     ]
   },
   {
-    "objectID": "schedule.html#references",
-    "href": "schedule.html#references",
-    "title": "Schedule",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Schedule"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "PSY 494 • Gilmore Lab • Fall 2025",
@@ -194,7 +204,27 @@
     "href": "index.html#meeting-time-location",
     "title": "PSY 494 • Gilmore Lab • Fall 2025",
     "section": "Meeting time & location",
-    "text": "Meeting time & location\nThursday, 8:00a - 8:50a\nTBD",
+    "text": "Meeting time & location\nThursday, 8:00a - 8:50a\nRoom 467 Moore Building",
+    "crumbs": [
+      "PSY 494 • Gilmore Lab • Fall 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#expectations",
+    "href": "index.html#expectations",
+    "title": "PSY 494 • Gilmore Lab • Fall 2025",
+    "section": "Expectations",
+    "text": "Expectations\n\nAttend and Participate in all meetings as this is a part of your Grade\nAttendance Expectations are the same for those who participate in lab for Credit or as a Volunteer.\nIf a meeting will be missed, notify the lab manager PRIOR to missing the meeting by Discord or email or you will be marked as a no show\nCheck out the meeting minutes on the Lab Website to see what was missed.\nCome prepared for the meeting by completing any homework assignments.",
+    "crumbs": [
+      "PSY 494 • Gilmore Lab • Fall 2025"
+    ]
+  },
+  {
+    "objectID": "index.html#required-training",
+    "href": "index.html#required-training",
+    "title": "PSY 494 • Gilmore Lab • Fall 2025",
+    "section": "Required Training",
+    "text": "Required Training\n\nCITI Training - every 3 years\nLearning Resource Network - yearly\n\nClery Act Training\nReporting Suspected Child Abuse\nValues, Ethics, & Compliance Training\nTitle IX Training\n\nBackground Check (only if collecting data on minors)",
     "crumbs": [
       "PSY 494 • Gilmore Lab • Fall 2025"
     ]
@@ -207,26 +237,6 @@
     "text": "References",
     "crumbs": [
       "PSY 494 • Gilmore Lab • Fall 2025"
-    ]
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "NO MEETING",
-    "crumbs": [
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "schedule.html#week-01",
-    "href": "schedule.html#week-01",
-    "title": "Schedule",
-    "section": "",
-    "text": "NO MEETING",
-    "crumbs": [
-      "Schedule"
     ]
   }
 ]

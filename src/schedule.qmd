@@ -6,43 +6,39 @@ title: "Schedule"
 
 ### Thu, Aug 28, 2025
 
-NO MEETING
+**NO MEETING**
 
 ## Week 02
 
 ### Thu, Sep 04, 2025
 
-0. Attending
-1. Introductions
-2. Fall 2025 Lab Projects (Rick)
-  - Play & Learning Across a Year (PLAY) Project, [PLAY site](https://play-project.org), [Parent site](https://anhourinthelife.org), [KoBoToolbox Surveys](https://PLAY-behaviorome.github.io/KoBoToolbox/)
-    - Data Collection Complete April 2025
-    - Locomotion Coding in Datavyu - Fall 2025
-      - 2-3 hours per video
-      - 75 video committment total
-  - Update [Databrary User Guide](https://databrary.github.io/guide/) to Databrary 2.0 using R Studio
-  - [Visual Acuity](https://gilmore-lab.github.io/visual-acuity/) Project
-    - [Visual Acuity Analysis Procedure](https://docs.google.com/document/d/1jdoIzE1cLHphA9y89jyhK20lTXJ2WCu4fBIATH25EeY/edit?tab=t.0)
-    - [Legacy Project Acuity Data: By Paper](https://docs.google.com/spreadsheets/d/1UFZkbh9oU4JHpYsrkDQcNmDyqD4J-qB74dhyMzIkqKs/edit?gid=432255138#gid=432255138)
-    - [Legacy Project Data Analysis](https://docs.google.com/spreadsheets/d/1XnGweqEAiTlU8mhvWqtCCMNm9l5txdR0YpQsuMxvgio/edit?gid=998401983#gid=998401983)
-  - [Databrary](https://databrary.org), especially the [Databrary Guide](https://databrary.github.io/guide)
-  - Refreshing internal resources, especially the [lab website](https://gilmore-lab.github.io) and our lab [protocols site](https://gilmore-lab.github.io/protocols).
-  - [Datacamp](https://www.datacamp.com/) 
-3. Homework
-  - [Create Discord Account](https://gilmore-lab.github.io/protocols/onboarding.html#discord)
-  - [CITI Training](https://gilmore-lab.github.io/protocols/training.html#citi-training) ASAP - new lab members
+- Introductions
+- Lab overview
+- Homework
+- [Link to mtg minutes](https://gilmore-lab.github.io/lab-meetings.html)
 
 ## Week 03
 
 ### Thu, Sep 11, 2025
 
+- Visual acuity project overview
+  - *Read*: @Neijzen2025-ak; @Gilmore2025-fz | [poster](https://github.com/gilmore-lab/vss-2025-poster/blob/main/vss-2025-poster.pdf) | 
+
 ## Week 04
 
 ### Thu, Sep 18, 2025
 
+- PLAY project overview
+  - *Read*: @Soska2021-mh
+  - *Review*: @SoskaUnknown-pq; @SoskaUnknown-ai
+
 ## Week 05
 
 ### Thu, Sep 25, 2025
+
+- Databrary overview
+  - *Read*: @Gilmore2017-wd, @Gilmore2018-cb
+  - *Review*: @Gilmore2025-tx
 
 ## Week 06
 
@@ -54,9 +50,15 @@ NO MEETING
 
 ### Thu, Oct 09, 2025
 
+- Open scholarship overview
+
 ## Week 08
 
 ### Thu, Oct 16, 2025
+
+- Big data developmental neuroscience
+  - *Review*: [HEALthy Brain and Child
+Development (HBCD) Study](https://hbcdstudy.org) 
 
 ## Week 09
 

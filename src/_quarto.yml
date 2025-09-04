@@ -32,8 +32,8 @@ website:
   bread-crumbs: false
   reader-mode: false
   
-# bibliography: [include/bib/psych-260.bib]
-# csl: include/bib/apa.csl
+bibliography: [include/bib/psych-494-gilmore.bib]
+csl: include/bib/apa.csl
 
 format:
   html:
