@@ -37,6 +37,7 @@ Room 467 Moore Building
   - [Reporting Suspected Child Abuse](https://gilmore-lab.github.io/protocols/training.html#reporting-suspected-child-abuse)
   - [Values, Ethics, & Compliance Training](https://gilmore-lab.github.io/protocols/training.html#values-ethics-and-compliance-training) 
   - [Title IX Training](https://gilmore-lab.github.io/protocols/training.html#understanding-title-ix-at-penn-state) 
+  - [Data Privacy at Penn State](https://gilmore-lab.github.io/protocols/training.html#data-privacy-at-penn-state)
 - Background Check (only if collecting data on minors)
 
 ## References
