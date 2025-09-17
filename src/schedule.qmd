@@ -28,17 +28,16 @@ title: "Schedule"
 
 ### Thu, Sep 18, 2025
 
-- PLAY project overview
-  - *Read*: @Soska2021-mh
-  - *Review*: @SoskaUnknown-pq; @SoskaUnknown-ai
+- Visual acuity project overview
+  - *Read*: @Neijzen2025-ak; @Gilmore2025-fz | [poster](https://github.com/gilmore-lab/vss-2025-poster/blob/main/vss-2025-poster.pdf) |
 
 ## Week 05
 
 ### Thu, Sep 25, 2025
 
-- Databrary overview
-  - *Read*: @Gilmore2017-wd, @Gilmore2018-cb
-  - *Review*: @Gilmore2025-tx
+- PLAY project overview
+  - *Read*: @Soska2021-mh
+  - *Review*: @SoskaUnknown-pq; @SoskaUnknown-ai
 
 ## Week 06
 
@@ -50,19 +49,23 @@ title: "Schedule"
 
 ### Thu, Oct 09, 2025
 
-- Open scholarship overview
+- Databrary overview
+  - *Read*: @Gilmore2017-wd, @Gilmore2018-cb
+  - *Review*: @Gilmore2025-tx
 
 ## Week 08
 
 ### Thu, Oct 16, 2025
 
-- Big data developmental neuroscience
-  - *Review*: [HEALthy Brain and Child
-Development (HBCD) Study](https://hbcdstudy.org) 
+- Open scholarship overview
 
 ## Week 09
 
 ### Thu, Oct 23, 2025
+
+- Big data developmental neuroscience
+  - *Review*: [HEALthy Brain and Child
+Development (HBCD) Study](https://hbcdstudy.org) 
 
 ## Week 10
 
