@@ -21,8 +21,7 @@ title: "Schedule"
 
 ### Thu, Sep 11, 2025
 
-- Visual acuity project overview
-  - *Read*: @Neijzen2025-ak; @Gilmore2025-fz | [poster](https://github.com/gilmore-lab/vss-2025-poster/blob/main/vss-2025-poster.pdf) | 
+**MEETING CANCELLED**
 
 ## Week 04
 
@@ -58,6 +57,8 @@ title: "Schedule"
 ### Thu, Oct 16, 2025
 
 - Open scholarship overview
+  - *Read*: @Gilmore2021-zr
+  - *Review*: @PSU-OSI-qa; @GilmoreUnknown-bj
 
 ## Week 09
 
@@ -65,7 +66,7 @@ title: "Schedule"
 
 - Big data developmental neuroscience
   - *Review*: [HEALthy Brain and Child
-Development (HBCD) Study](https://hbcdstudy.org) 
+Development (HBCD) Study](https://hbcdstudy.org); [Adolescent Brain Cognitive Development (ABCD) study](https://abcdstudy.org)
 
 ## Week 10
 
