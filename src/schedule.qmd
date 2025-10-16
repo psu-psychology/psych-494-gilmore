@@ -56,21 +56,26 @@ title: "Schedule"
 
 ### Thu, Oct 16, 2025
 
-- Open scholarship overview
-  - *Read*: @Gilmore2021-zr
-  - *Review*: @PSU-OSI-qa; @GilmoreUnknown-bj
+- More on Databrary and data sharing
+  - Example: <https://databrary.org/volume/61>
+  - Example: <https://psu-psychology.github.io/psy-548-2025-fall/constructivism.html>
+  - Example: <https://databrary.org/volume/49>
 
 ## Week 09
 
 ### Thu, Oct 23, 2025
 
-- Big data developmental neuroscience
-  - *Review*: [HEALthy Brain and Child
-Development (HBCD) Study](https://hbcdstudy.org); [Adolescent Brain Cognitive Development (ABCD) study](https://abcdstudy.org)
+- Open scholarship overview
+  - *Read*: @Gilmore2021-zr
+  - *Review*: @PSU-OSI-qa; @GilmoreUnknown-bj
 
 ## Week 10
 
 ### Thu, Oct 30, 2025
+
+- Big data developmental neuroscience
+  - *Review*: [HEALthy Brain and Child
+Development (HBCD) Study](https://hbcdstudy.org); [Adolescent Brain Cognitive Development (ABCD) study](https://abcdstudy.org)
 
 ## Week 11
 
