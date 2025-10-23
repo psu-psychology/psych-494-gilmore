@@ -1,5 +1,6 @@
 ---
-title: "PSY 494 • Gilmore Lab • Fall 2025"
+title: "PSYCH 494"
+subtitle: "Gilmore Lab • Fall 2025"
 ---
 
 ## Instructor {-}
