@@ -114,7 +114,7 @@
     "href": "schedule.html#week-11",
     "title": "Schedule",
     "section": "Week 11",
-    "text": "Week 11\n\nThu, Nov 06, 2025\n\nAutism and Tylenol: What’s the evidence?",
+    "text": "Week 11\n\nThu, Nov 06, 2025\n\nAutism and Tylenol: What’s the evidence?\nSlides: | html |",
     "crumbs": [
       "Schedule"
     ]
@@ -124,7 +124,7 @@
     "href": "schedule.html#week-12",
     "title": "Schedule",
     "section": "Week 12",
-    "text": "Week 12\n\nThu, Nov 13, 2025",
+    "text": "Week 12\n\nThu, Nov 13, 2025\n\nMore on Autism and Tylenol: What’s the evidence?\nReview: Shaw et al. (2025)\nSlides: | html |",
     "crumbs": [
       "Schedule"
     ]
@@ -238,5 +238,26 @@
     "crumbs": [
       "PSYCH 494"
     ]
+  },
+  {
+    "objectID": "2025-11-06-autism.html",
+    "href": "2025-11-06-autism.html",
+    "title": "Autism spectrum disorder controversy",
+    "section": "",
+    "text": "Source: https://xkcd.com/3117/"
+  },
+  {
+    "objectID": "2025-11-06-autism.html#about",
+    "href": "2025-11-06-autism.html#about",
+    "title": "Autism spectrum disorder controversy",
+    "section": "About",
+    "text": "About\nThis page documents the lab’s work on the question of what factors contribute to the rise in diagnoses of Autism Spectrum Disorder (ASD)."
+  },
+  {
+    "objectID": "2025-11-06-autism.html#background",
+    "href": "2025-11-06-autism.html#background",
+    "title": "Autism spectrum disorder controversy",
+    "section": "Background",
+    "text": "Background\nOn October 29, 2025, U.S. Secretary of Health and Human Services (HHS) Robert F. Kennedy, Jr. said that there is not “sufficient” evidence to link use of Tylenol (acetaminophen) during pregnancy to autism (Ramaswamy, 2025).\nIn April, the Centers for Disease Control released a report (Shaw et al., 2025) from the Autism and Developmental Disabilities Monitoring (ADDM) Network (CDC, 2025).\nHere is a figure to capture some of the associations:\n\n\n\n\n\nflowchart TD\n  B(sex) ---&gt; A[ASD_dx]\n  C(med household income) ---&gt; A\n  D(race) ---&gt; A\n  E(location) ---&gt; A\n  F(age_2022) ---&gt; A\n  A --- G[intellectual disability]\n  D ---&gt; G\n  E ---&gt; G\n  F ---&gt; G\n  H(age_dx) ---&gt; A\n  E ---&gt; I(use of ASD test)\n  I ---&gt; A\n  J{health literacy} ---&gt; A\n\n\n\n\n\n\n\nAutism diagnosis (dx) measures\nShaw et al. (2025) assigned an autism diagnosis to children who met one of the following criteria:\n\n\nan ASD diagnostic statement in a comprehensive developmental evaluation, 2) autism special education eligibility, or 3) an ASD ICD-9 code in the 299 range or ICD-10 code of F84.0, F84.3, F84.5, F84.8, or F84.9. Children aged 4 years were classified as having suspected ASD if they did not meet the criteria for ASD but had an evaluator’s suspicion of ASD documented in a comprehensive developmental evaluation.\n\n\n\nAutism Diagnostic Observation Schedule (ADOS), “(ADOS®-2) autism diagnostic observation schedule, second edition” (n.d.)\nAutism Spectrum Rating Scales (ASRS), Naglieri (n.d.)\nChildhood Autism Rating Scale (CARS), “(CARS®2) childhood autism rating scale, second edition” (n.d.)\nGilliam Autism Rating Scale (GARS), Gilliam (n.d.)\nSocial Responsiveness Scale (SRS), “(SRS™-2) social responsiveness scale, second edition” (n.d.)\nAutism Diagnostic Interview-Revised (ADI-R), “(ADI®-R) autism diagnostic Interview–Revised” (n.d.)\n\n\n\n\n\n\n\nNote\n\n\n\nAll of the tests are available only to administrators who pay for the testing materials.\n\n\nHere is a paper that compares the ADOS to the CARS: Park, Yi, Yoon, & Hong (2018).\nAutism Speaks promotes this parent-completed survey: “M-CHAT™ - autism screening” (2015).\n\n\nData by state\nThe Shaw et al. (2025) supplemental data are here.\n\n\n\nShaw et al. (2025) Supplemental Data. The width of the state-level prevalence estimates is due to different sample sizes. See Table 1 for more specifics about the state-level samples."
   }
 ]

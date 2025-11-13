@@ -1,0 +1,64 @@
+---
+title: "Autism spectrum disorder controversy"
+subtitle: 2025-11-06
+format: html
+---
+
+![Source: <https://xkcd.com/3117/>](https://imgs.xkcd.com/comics/replication_crisis.png)
+
+## About
+
+This page documents the lab's work on the question of what factors contribute to the rise in diagnoses of Autism Spectrum Disorder (ASD).
+
+## Background
+
+On October 29, 2025, U.S. Secretary of Health and Human Services (HHS) Robert F. Kennedy, Jr. said that there is not "sufficient" evidence to link use of Tylenol ([acetaminophen](https://en.wikipedia.org/wiki/Paracetamol)) during pregnancy to autism [@Ramaswamy2025-ro].
+
+In April, the Centers for Disease Control released a report [@Shaw2025-hr] from the Autism and Developmental Disabilities Monitoring (ADDM) Network [@CDC2025-ub].
+
+Here is a figure to capture some of the associations:
+
+```{mermaid}
+flowchart TD
+  B(sex) ---> A[ASD_dx]
+  C(med household income) ---> A
+  D(race) ---> A
+  E(location) ---> A
+  F(age_2022) ---> A
+  A --- G[intellectual disability]
+  D ---> G
+  E ---> G
+  F ---> G
+  H(age_dx) ---> A
+  E ---> I(use of ASD test)
+  I ---> A
+  J{health literacy} ---> A
+```
+
+### Autism diagnosis (dx) measures
+
+@Shaw2025-hr assigned an autism diagnosis to children who met one of the following criteria:
+
+>1) an ASD diagnostic statement in a comprehensive developmental evaluation, 2) autism special education eligibility, or 3) an ASD ICD-9 code in the 299 range or ICD-10 code of F84.0, F84.3, F84.5, F84.8, or F84.9. Children aged 4 years were classified as having suspected ASD if they did not meet the criteria for ASD but had an evaluator’s suspicion of ASD documented in a comprehensive developmental evaluation. 
+
+- Autism Diagnostic Observation Schedule (ADOS), @ADOS-ed
+- Autism Spectrum Rating Scales (ASRS), @NaglieriUnknown-dy
+- Childhood Autism Rating Scale (CARS), @CARS-xe
+- Gilliam Autism Rating Scale (GARS), @GilliamUnknown-ik
+- Social Responsiveness Scale (SRS), @SRS-uj
+- Autism Diagnostic Interview-Revised (ADI-R), @ADI-rm
+
+::: {.callout-note}
+All of the tests are available only to administrators who pay for the testing materials.
+:::
+
+Here is a paper that compares the ADOS to the CARS: @Park2018-wq.
+
+[Autism Speaks](https://www.autismspeaks.org/) promotes this parent-completed survey: @M-CHAT2015-ke.
+
+### Data by state
+
+The @Shaw2025-hr supplemental data are [here](include/pdf/cdc_177099_DS2.pdf).
+
+![@Shaw2025-hr Supplemental Data. The width of the state-level prevalence estimates is due to different sample sizes. See [Table 1](https://www.cdc.gov/mmwr/volumes/74/ss/ss7402a1.htm#T1_down) for more specifics about the state-level samples.](include/img/cdc-autism-prev-by-state.png)
+ 

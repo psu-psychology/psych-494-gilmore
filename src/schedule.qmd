@@ -82,10 +82,15 @@ Development (HBCD) Study](https://hbcdstudy.org); [Adolescent Brain Cognitive De
 ### Thu, Nov 06, 2025
 
 - Autism and Tylenol: What's the evidence?
+- Slides: | [html](2025-11-06-autism.qmd) |
 
 ## Week 12
 
 ### Thu, Nov 13, 2025
+
+- More on Autism and Tylenol: What's the evidence?
+- Review: @Shaw2025-hr
+- Slides: | [html](2025-11-06-autism.qmd) |
 
 ## Week 13
 
