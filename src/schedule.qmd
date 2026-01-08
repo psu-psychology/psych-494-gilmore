@@ -4,13 +4,13 @@ title: "Schedule"
 
 ## Week 01
 
-### Thu, Aug 28, 2025
+### Wed, Jan 14, 2026
 
 **NO MEETING**
 
 ## Week 02
 
-### Thu, Sep 04, 2025
+### Wed, Jan 21, 2026
 
 - Introductions
 - Lab overview
@@ -19,92 +19,57 @@ title: "Schedule"
 
 ## Week 03
 
-### Thu, Sep 11, 2025
-
-**MEETING CANCELLED**
+### Wed, Jan 28, 2026
 
 ## Week 04
 
-### Thu, Sep 18, 2025
-
-- Visual acuity project overview
-  - *Read*: @Neijzen2025-ak; @Gilmore2025-fz | [poster](https://github.com/gilmore-lab/vss-2025-poster/blob/main/vss-2025-poster.pdf) |
+### Wed, Feb 04, 2026
 
 ## Week 05
 
-### Thu, Sep 25, 2025
-
-- PLAY project overview
-  - *Read*: @Soska2021-mh
-  - *Review*: @SoskaUnknown-pq; @SoskaUnknown-ai
+### Wed, Feb 11, 2026
 
 ## Week 06
 
-### Thu, Oct 02, 2025
-
-**NO MEETING**
+### Wed, Feb 18, 2026
 
 ## Week 07
 
-### Thu, Oct 09, 2025
-
-- Databrary overview
-  - *Read*: @Gilmore2017-wd, @Gilmore2018-cb
-  - *Review*: @Gilmore2025-tx
+### Wed, Feb 25, 2026
 
 ## Week 08
 
-### Thu, Oct 16, 2025
-
-- More on Databrary and data sharing
-  - Example: <https://databrary.org/volume/61>
-  - Example: <https://psu-psychology.github.io/psy-548-2025-fall/constructivism.html>
-  - Example: <https://databrary.org/volume/49>
+### Wed, Mar 04, 2026
 
 ## Week 09
 
-### Thu, Oct 23, 2025
+### Wed, Mar 11, 2026
 
-- Open scholarship overview
-  - *Read*: @Gilmore2021-zr
-  - *Review*: @PSU-OSI-qa; @GilmoreUnknown-bj
+**NO MEETING** Spring Break
 
 ## Week 10
 
-### Thu, Oct 30, 2025
-
-- Big data developmental neuroscience
-  - *Review*: [HEALthy Brain and Child
-Development (HBCD) Study](https://hbcdstudy.org); [Adolescent Brain Cognitive Development (ABCD) study](https://abcdstudy.org)
+### Wed, Mar 18, 2026
 
 ## Week 11
 
-### Thu, Nov 06, 2025
-
-- Autism and Tylenol: What's the evidence?
-- Slides: | [html](2025-11-06-autism.qmd) |
+### Wed, Mar 25, 2026
 
 ## Week 12
 
-### Thu, Nov 13, 2025
-
-- More on Autism and Tylenol: What's the evidence?
-- Review: @Shaw2025-hr
-- Slides: | [html](2025-11-06-autism.qmd) |
+### Wed, Apr 01, 2026
 
 ## Week 13
 
-### Thu, Nov 20, 2025
-
-## Thanksgiving
+### Wed, Apr 08, 2026
 
 ## Week 14
 
-### Thu, Dec 02, 2025
+### Wed, Apr 15, 2026
 
 ## Week 15
 
-### Thu, Dec 09, 2025
+### Wed, Apr 22, 2026
 
 ## References
 
