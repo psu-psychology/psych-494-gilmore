@@ -2,6 +2,9 @@
 title: "Autism spectrum disorder controversy"
 subtitle: 2025-11-06
 format: html
+params:
+  csv_dir: "include/csv"
+  sheets_fn: "wilson-2025-tables.csv"
 ---
 
 ![Source: <https://xkcd.com/3117/>](https://imgs.xkcd.com/comics/replication_crisis.png)
@@ -61,4 +64,378 @@ Here is a paper that compares the ADOS to the CARS: @Park2018-wq.
 The @Shaw2025-hr supplemental data are [here](include/pdf/cdc_177099_DS2.pdf).
 
 ![@Shaw2025-hr Supplemental Data. The width of the state-level prevalence estimates is due to different sample sizes. See [Table 1](https://www.cdc.gov/mmwr/volumes/74/ss/ss7402a1.htm#T1_down) for more specifics about the state-level samples.](include/img/cdc-autism-prev-by-state.png)
- 
+
+## Data exploration
+
+The following documents an exploration of the data reported in tables in @Shaw2025-hr.
+
+```{r}
+#| label: setup
+suppressPackageStartupMessages(library(ggplot2))
+```
+
+Download the data from the Google sheet stored here:
+
+Table 1: https://docs.google.com/spreadsheets/d/13XMwkWLzoEZ-laHWRNo2OfK6Te2wctjnXpBhKtMaMkA/edit?gid=0#gid=0
+
+### Table 01
+
+```{r}
+#| label: import-data-table-01
+#| message: false
+#| eval: false
+if (!dir.exists(params$csv_dir)) {
+  message("Creating missing `include/csv/`.")
+  dir.create(params$csv_dir)
+}
+
+options(gargle_oauth_email = Sys.getenv("GMAIL_SURVEY"))
+
+table_01 <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/13XMwkWLzoEZ-laHWRNo2OfK6Te2wctjnXpBhKtMaMkA", sheet = "table-01")
+
+readr::write_csv(table_01, file = "include/csv/wilson-2025-table-01.csv")
+
+head(table_01)
+```
+
+```{r}
+#| label: reimport-data-csv
+
+table_01 <- readr::read_csv(file = "include/csv/wilson-2025-table-01.csv", show_col_types = FALSE)
+```
+
+Clean Table 01 names.
+
+```{r}
+#| label: clean-table-01
+
+# Rename variables
+table_01_clean <- table_01 |>
+  dplyr::rename(
+    area_desc = "Surveillance area description",
+    sources = "Types of data sources used*",
+    pop_pct_coverage = "% population coverage of education data sources†",
+    cases_pct_avail = "% of cases with records available for abstraction at ≥1 source§",
+    pop_total = "Total population",
+    n_ASD = "No. with ASD",
+    prev_ASD = "ASD prevalence (95% CI)¶"
+  )
+```
+
+Parse the `prev_ASD` variable.
+
+```{r}
+n_sites <- length(table_01_clean$area_desc)
+prev_numbers <- table_01_clean$prev_ASD |> 
+  stringr::str_extract_all(pattern = "[0-9]+.[0-9]{1}") |>
+  unlist() |> 
+  array(dim = c(n_sites,3))
+
+prev <- prev_numbers[,1] |> as.numeric()
+CI_lo <- prev_numbers[,2] |> as.numeric()
+CI_hi <- prev_numbers[,3] |> as.numeric()
+
+table_01_clean$prev <- prev
+table_01_clean$CI_lo <- CI_lo
+table_01_clean$CI_hi <- CI_hi
+```
+
+Generate simple visualizations.
+
+```{r}
+#| label: fig-prevalence-histogram
+table_01_clean |>
+  ggplot() +
+  geom_histogram(aes(x=prev), bins = 5) +
+  theme_classic()
+```
+
+```{r}
+#| label: fig-pct_coverage-histogram
+table_01_clean |>
+  ggplot() +
+  geom_histogram(aes(x=pop_pct_coverage), bins = 5) +
+  theme_classic()
+```
+
+```{r}
+#| label: fig-pop_total-histogram
+table_01_clean |>
+  ggplot() +
+  geom_histogram(aes(x=pop_total), bins = 5) +
+  theme_classic()
+```
+
+### Table 02: Sex & Race
+
+```{r}
+#| label: import-data-table-02
+#| message: false
+#| eval: false
+
+table_02 <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/13XMwkWLzoEZ-laHWRNo2OfK6Te2wctjnXpBhKtMaMkA", sheet = "table-02")
+
+readr::write_csv(table_02, file = "include/csv/wilson-2025-table-02.csv")
+
+head(table_02)
+```
+
+```{r}
+#| label: clean-table-02
+
+table_02 <- readr::read_csv(file = "include/csv/wilson-2025-table-02.csv")
+
+# Rename variables
+table_02_clean <- table_02 |>
+  dplyr::rename(
+    male_female_ratio = "male-to-female",
+    A_PI = "A/PI",
+    A_PI_2_white = "A/PI to White",
+    black_2_white = "Black to White",
+    hispanic_2_white = "Hispanic to White",
+    multiracial_2_white = "Multiracial to White"
+  )
+
+head(table_02_clean)
+```
+
+```{r}
+n_sites <- length(table_02_clean$Site)
+
+prev_male_CI <- table_02_clean$male |> 
+  stringr::str_extract_all(pattern = "[0-9]+.[0-9]{1}") |>
+  unlist() |> 
+  array(dim = c(n_sites,3))
+
+prev_male <- prev_male_CI[,1] |> as.numeric()
+prev_male_CI_lo <- prev_male_CI[,2] |> as.numeric()
+prev_male_CI_hi <- prev_male_CI[,3] |> as.numeric()
+
+table_02_clean$prev_male <- prev_male
+table_02_clean$prev_male_CI_lo <- prev_male_CI_lo
+table_02_clean$prev_male_CI_hi <- prev_male_CI_hi
+
+# The previous work could/should be turned into a function
+
+prev_female_CI <- table_02_clean$female |> 
+  stringr::str_extract_all(pattern = "[0-9]+.[0-9]{1}") |>
+  unlist() |> 
+  array(dim = c(n_sites,3))
+
+prev_female <- prev_female_CI[,1] |> as.numeric()
+prev_female_CI_lo <- prev_female_CI[,2] |> as.numeric()
+prev_female_CI_hi <- prev_female_CI[,3] |> as.numeric()
+
+table_02_clean$prev_female <- prev_female
+table_02_clean$prev_female_CI_lo <- prev_female_CI_lo
+table_02_clean$prev_female_CI_hi <- prev_female_CI_hi
+
+prev_female_CI <- table_02_clean$female |> 
+  stringr::str_extract_all(pattern = "[0-9]+.[0-9]{1}") |>
+  unlist() |> 
+  array(dim = c(n_sites,3))
+
+prev_female <- prev_female_CI[,1] |> as.numeric()
+prev_female_CI_lo <- prev_female_CI[,2] |> as.numeric()
+prev_female_CI_hi <- prev_female_CI[,3] |> as.numeric()
+
+table_02_clean$prev_female <- prev_female
+table_02_clean$prev_female_CI_lo <- prev_female_CI_lo
+table_02_clean$prev_female_CI_hi <- prev_female_CI_hi
+```
+
+Generate simple visualizations for male/female data.
+
+```{r}
+#| label: fig-prev_male-histogram
+table_02_clean |>
+  ggplot() +
+  geom_histogram(aes(x=prev_male), bins = 5) +
+  theme_classic()
+```
+
+```{r}
+#| label: fig-prev_female-histogram
+table_02_clean |>
+  ggplot() +
+  geom_histogram(aes(x=prev_female), bins = 5) +
+  theme_classic()
+```
+
+Make longer to enable better comparisons between male and female prevalence rates.
+
+```{r}
+#| label: create-table_02_sex
+table_02_sex <- table_02_clean |>
+  dplyr::select(Site, prev_male, prev_female) |>
+  tidyr::pivot_longer(cols = c("prev_male", "prev_female"),
+                      names_to = "sex") |>
+  dplyr::mutate(sex = stringr::str_remove(sex, "prev_")) |>
+  dplyr::rename(prev = "value")
+```
+
+Plot data by sex.
+
+```{r}
+#| label: fig-table_02_clean_sex_histogram
+
+table_02_sex |>
+  ggplot() +
+  geom_histogram(aes(x = prev, fill = sex), bins = 6)
+```
+
+```{r}
+#| label: fig-table_02_clean_sex_histogram_faceted
+
+table_02_sex |>
+  ggplot() +
+  geom_histogram(aes(x = prev, fill = sex), bins = 5) +
+  facet_grid(rows = vars(sex)) +
+  theme_classic() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom")
+```
+
+Scatterplot data by sex.
+
+```{r}
+#| label: fig-table_02_clean_sex_scatterplot
+table_02_clean |>
+  ggplot() +
+  geom_point(aes(x = prev_male, y = prev_female)) +
+  geom_smooth(aes(x = prev_male, y = prev_female)) +
+  theme_classic() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom")
+```
+
+Add point labels.
+
+```{r}
+#| label: fig-table_02_clean_sex_scatterplot_labeled
+table_02_clean |>
+  dplyr::mutate(high_prev_male = prev_male > mean(prev_male)) |>
+  dplyr::mutate(labels = ifelse(high_prev_male, Site, NA)) |>
+  ggplot() +
+  geom_point(aes(x = prev_male, y = prev_female)) +
+  geom_smooth(aes(x = prev_male, y = prev_female)) +
+  geom_text(aes(x = prev_male, y = prev_female, label = labels), 
+            nudge_y = .5, nudge_x = 2) +
+  theme_classic() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom")
+```
+
+Clean race/ethnicity.
+
+```{r}
+#| label: clean-race-ethnicity
+
+# asian_pac_isl
+A_PI_CI <- table_02_clean$A_PI |> 
+  stringr::str_extract_all(pattern = "[0-9]+.[0-9]{1}") |>
+  unlist() |> 
+  array(dim = c(n_sites,3))
+
+prev_A_PI <- A_PI_CI[,1] |> as.numeric()
+prev_A_PI_CI_lo <- A_PI_CI[,2] |> as.numeric()
+prev_A_PI_CI_hi <- A_PI_CI[,3] |> as.numeric()
+
+table_02_clean$prev_A_PI <- prev_A_PI
+table_02_clean$prev_A_PI_lo <- prev_A_PI_CI_lo
+table_02_clean$prev_A_PI_hi <- prev_A_PI_CI_hi
+
+# Black
+Black_CI <- table_02_clean$Black |> 
+  stringr::str_extract_all(pattern = "[0-9]+.[0-9]{1}") |>
+  unlist() |> 
+  array(dim = c(n_sites,3))
+
+prev_Black <- Black_CI[,1] |> as.numeric()
+prev_Black_CI_lo <- Black_CI[,2] |> as.numeric()
+prev_Black_CI_hi <- Black_CI[,3] |> as.numeric()
+
+table_02_clean$prev_Black <- prev_Black
+table_02_clean$prev_Black_CI_lo <- prev_Black_CI_lo
+table_02_clean$prev_Black_CI_hi <- prev_Black_CI_hi
+
+# Hispanic
+Hispanic_CI <- table_02_clean$Hispanic |> 
+  stringr::str_extract_all(pattern = "[0-9]+.[0-9]{1}") |>
+  unlist() |> 
+  array(dim = c(n_sites,3))
+
+prev_Hispanic <- Hispanic_CI[,1] |> as.numeric()
+prev_Hispanic_CI_lo <- Hispanic_CI[,2] |> as.numeric()
+prev_HispanicCI_hi <- Hispanic_CI[,3] |> as.numeric()
+
+table_02_clean$prev_Hispanic <- prev_Hispanic
+table_02_clean$prev_Hispanic_CI_lo <- prev_Hispanic_CI_lo
+table_02_clean$prev_Hispanic_CI_hi <- prev_HispanicCI_hi
+
+# White
+White_CI <- table_02_clean$White |> 
+  stringr::str_extract_all(pattern = "[0-9]+.[0-9]{1}") |>
+  unlist() |> 
+  array(dim = c(n_sites,3))
+
+prev_White <- White_CI[,1] |> as.numeric()
+prev_White_CI_lo <- White_CI[,2] |> as.numeric()
+prev_White_CI_hi <- White_CI[,3] |> as.numeric()
+
+table_02_clean$prev_White <- prev_White
+table_02_clean$prev_White_CI_lo <- prev_White_CI_lo
+table_02_clean$prev_White_CI_hi <- prev_White_CI_hi
+
+# Multiracial
+Multiracial_CI <- table_02_clean$Multiracial |> 
+  stringr::str_extract_all(pattern = "[0-9]+.[0-9]{1}") |>
+  unlist() |> 
+  array(dim = c(n_sites,3))
+
+prev_Multiracial <- Multiracial_CI[,1] |> as.numeric()
+prev_Multiracial_CI_lo <- Multiracial_CI[,2] |> as.numeric()
+prev_Multiracial_CI_hi <- Multiracial_CI[,3] |> as.numeric()
+
+table_02_clean$prev_Multiracial <- prev_Multiracial
+table_02_clean$prev_Multiracial_CI_lo <- prev_Multiracial_CI_lo
+table_02_clean$prev_Multiracial_CI_hi <- prev_Multiracial_CI_hi
+```
+
+Select race data and make a long data frame for plotting.
+
+```{r}
+#| label: clean-race-create-df
+table_02_race <- table_02_clean |>
+  dplyr::select(Site, prev_A_PI, prev_Black,
+                prev_Hispanic, prev_White, prev_Multiracial) |>
+  tidyr::pivot_longer(cols = c("prev_A_PI", "prev_Black",
+                "prev_Hispanic", "prev_White", "prev_Multiracial"),
+                      names_to = "race") |>
+  dplyr::mutate(race = stringr::str_remove(race, "prev_")) |>
+  dplyr::rename(prev = "value")
+```
+
+```{r}
+#| label: fig-table_02_clean_race_histogram_faceted
+
+table_02_race |>
+  ggplot() +
+  geom_histogram(aes(x = prev, fill = race), bins = 5) +
+  facet_grid(cols = vars(race)) +
+  theme_classic() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom")
+```
+
+```{r}
+#| label: fig-table_02_clean_race_boxplot_faceted
+
+table_02_race |>
+  ggplot() +
+  geom_boxplot(aes(x = prev, fill = race), bins = 5) +
+  facet_grid(cols = vars(race)) +
+  theme_classic() +
+  theme(legend.title = element_blank(),
+        legend.position = "bottom")
+```
