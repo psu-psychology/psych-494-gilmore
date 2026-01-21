@@ -24,8 +24,8 @@ Room 444 Moore Building
 
 ## Expectations
 
-- Attend and Participate in all meetings as this is a part of your Grade
-- Attendance Expectations are the same for those who participate in lab for Credit or as a Volunteer.
+- Attend and participate in all meetings as this is a part of your grade
+- Attendance expectations are the same for those who participate in lab for Credit or as a Volunteer.
 - If a meeting will be missed, notify the lab manager PRIOR to missing the meeting by Discord or email or you will be marked as a no show 
 - Check out the meeting minutes on the [Lab Website](https://gilmore-lab.github.io/lab-meetings.html) to see what was missed.
 - Come prepared for the meeting by completing any homework assignments.
@@ -41,5 +41,5 @@ Room 444 Moore Building
   - [Data Privacy at Penn State](https://gilmore-lab.github.io/protocols/training.html#data-privacy-at-penn-state)
 - Background Check (only if collecting data on minors)
 
-## References
+<!-- ## References -->
 
