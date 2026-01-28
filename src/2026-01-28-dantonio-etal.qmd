@@ -1,0 +1,58 @@
+---
+title: "Discussion of D'Antonio et al. 2026"
+format: html
+---
+
+## About
+
+This document provides supporting information for a discussion in our lab meeting regarding @D-Antonio2026-vo.
+
+## Key concepts
+
+- cohort studies
+- adjusted risk estimates
+- Quality In Prognosis Studies (QUIPS) tool
+- sibling-comparison studies
+- odds ratios
+- PROSPERO
+
+## Background
+
+@Prada2025-bm was one study that the September 2025 NIH announcement relied upon.
+This paper made use of Navigation Guide [@Woodruff2014-kh] methodology and qualitative synthesis.
+
+@Ahlqvist2024-fl was another metaanalysis that found evidence for a relationship.
+
+## Figures
+
+::: {.callout-note}
+Links to the figures do not resolve because the article is behind the journal's paywall.
+:::
+
+![@D-Antonio2026-vo Figure 1](https://www.thelancet.com/cms/10.1016/S3050-5038(25)00211-0/asset/3fd674fe-7ab9-49f4-a970-75fae251d016/main.assets/gr1_lrg.jpg)
+
+![@D-Antonio2026-vo Figure 2^[Risk of autism spectrum disorder in children with in-utero exposure to paracetamol versus unexposed children]](https://www.thelancet.com/cms/10.1016/S3050-5038(25)00211-0/asset/f22bae6f-e0ba-45f2-b7b1-2f3f8f8a3cdf/main.assets/gr2_lrg.jpg)
+
+![@D-Antonio2026-vo Table 1](https://www.thelancet.com/action/showFullTableHTML?isHtml=true&tableId=tbl1&pii=S3050-5038%2825%2900211-0)
+
+## Discussion points
+
+- Why did earlier studies find associations?
+
+>...findings suggest that previously reported associations might be artifacts of unmeasured confounding, such as underlying maternal pain, discomfort, fever, or genetic liability, rather than direct drug effects
+
+>...heterogeneity in diagnostic eras, reflecting changes over time in diagnostic criteria, instruments, and assessment practices, is inevitable across the included studies. Neurodevelopmental diagnoses have evolved substantially over time,67 and the outcomes reported here represent neurodevelopmental diagnoses as defined in their time, rather than a single uniform construct. Within this framework, the most reassuring null findings consistently come from large, registry-based cohort studies employing sibling-comparison designs, which minimise confounding from shared familial, genetic, and environmental factors
+
+>Biological mechanisms proposed to link paracetamol with neurodevelopmental outcomes...are plausible, [but] most supporting evidence has been obtained from animal or in-vitro studies, and no human data have established causality.
+
+>highlight the complexity of distinguishing medication effects from underlying maternal and familial factors
+
+>Many existing analyses rely on maternal self-report of paracetamol use, which is susceptible to recall bias and misclassification, particularly as mothers of children later identified with a neurodevelopmental condition might be more likely to recall or over-report medication use. Exposure assessment should ideally incorporate pharmacy dispensing records or biomarker validation to improve accuracy.
+
+- What should be done in future work?
+
+>Exposure assessment should ideally incorporate pharmacy dispensing records or biomarker validation to improve accuracy. Outcome definitions also varied widely across studies, with some relying on survey-based assessments rather than validated diagnostic criteria.
+
+>standardising diagnostic methods and ensuring long-term follow-up could improve comparability and strengthen pooled estimates.
+
+>when calculating the prevalence of neurodevelopmental outcomes, it is crucial to consider the baseline risk of such conditions within families. Family-based designs, such as sibling comparisons, represent a valuable approach to controlling for shared genetic and environmental factors.

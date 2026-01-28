@@ -21,7 +21,8 @@ title: "Schedule"
 
 ### Wed, Jan 28, 2026
 
-- Read & discuss @D-Antonio2026-vo
+- Read & discuss @D-Antonio2026-vo.
+- [Notes](2026-01-28-dantonio-etal.qmd)
 
 ## Week 04
 
