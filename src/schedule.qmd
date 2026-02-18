@@ -41,6 +41,9 @@ title: "Schedule"
 ### Wed, Feb 18, 2026
 
 - Read & discuss @McIntire2026-fk
+  - Resources
+    - Adolescent Brain Cognitive Development (ABCD) [study](https://abcdstudy.org).
+    - [Belmont Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html).
 
 ## Week 07
 
