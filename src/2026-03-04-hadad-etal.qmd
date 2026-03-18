@@ -110,11 +110,13 @@ plt.axis('off') # Hide axes
 plt.show()
 ```
 
-  - A moving grating can yield a Barber Pole illusion:
+![https://www.researchgate.net/figure/a-Two-dimensional-image-of-sinusoidal-amplitude-grating-and-b-profile-of-amplitude_fig10_335454256](https://www.researchgate.net/profile/James-Harvey-8/publication/335454256/figure/fig10/AS:796922902216704@1567012634119/a-Two-dimensional-image-of-sinusoidal-amplitude-grating-and-b-profile-of-amplitude.ppm)
+
+- A moving grating can yield a Barber Pole illusion:
   
-  ![@Wikipedia-contributors2025-hv^["By The original uploader was Rokers at English Wikipedia. - Transferred from en.wikipedia to Commons., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1881350"]](https://upload.wikimedia.org/wikipedia/commons/3/39/Barberpole_illusion_animated.gif)
+![@Wikipedia-contributors2025-hv^["By The original uploader was Rokers at English Wikipedia. - Transferred from en.wikipedia to Commons., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1881350"]](https://upload.wikimedia.org/wikipedia/commons/3/39/Barberpole_illusion_animated.gif){#fig-barber-pole-gif}
   
-  - Plaids
+- Plaids
   
 ::: {#fig-plaids-ambiguous-not}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WhbZesV2GRk?si=TeA4BPTaGS7Dz6bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -126,7 +128,109 @@ plt.show()
   - Random Dot Kinematograms (RDKs)
     - [Example](https://databrary.org/volume/49) from Databrary
 
-- Gabor stimuli
-
-
+- Gabor stimuli (Gabor patch)
+  - A grating convolved with^[@Wikipedia-contributors2026-aa] a 2D Gaussian^[@Wikipedia-contributors2026-rw].
   
+```{python}
+# Generated from Safari AI query 2026-03-18
+import numpy as np
+import matplotlib.pyplot as plt
+
+def make_gabor_patch(size, sigma, wavelength, orientation, phase, gamma):
+    """
+    Generates a Gabor patch.
+
+    Parameters:
+    size (int): The size of the patch in pixels (e.g., 128).
+    sigma (float): The spatial constant (standard deviation of the Gaussian envelope).
+    wavelength (float): The wavelength of the sine wave (spatial frequency).
+    orientation (float): The orientation of the patch in degrees.
+    phase (float): The phase of the sine wave in degrees.
+    gamma (float): The spatial aspect ratio (1 for circular, <1 for elliptical).
+    """
+    # Convert parameters to radians
+    theta = np.deg2rad(orientation)
+    psi = np.deg2rad(phase)
+    
+    # Calculate sigma_x and sigma_y based on aspect ratio
+    sigma_x = sigma
+    sigma_y = sigma / gamma
+    
+    # Create a meshgrid of coordinates
+    # The range is chosen to ensure the Gaussian envelope is fully captured (typically +/- 3*sigma)
+    nstds = 3
+    xmax = max(abs(nstds * sigma_x * np.cos(theta)), abs(nstds * sigma_y * np.sin(theta)))
+    ymax = max(abs(nstds * sigma_x * np.sin(theta)), abs(nstds * sigma_y * np.cos(theta)))
+    xmax = int(np.ceil(max(1, xmax)))
+    ymax = int(np.ceil(max(1, ymax)))
+    xmin, ymin = -xmax, -ymax
+    
+    # Expand the range if the specified size is larger
+    if size > 2 * xmax + 1:
+        xmax = ymax = (size - 1) // 2
+        xmin, ymin = -xmax, -ymax
+
+    [x, y] = np.meshgrid(np.arange(xmin, xmax + 1), np.arange(ymin, ymax + 1))
+    
+    # Rotate the coordinates
+    x_theta = x * np.cos(theta) + y * np.sin(theta)
+    y_theta = -x * np.sin(theta) + y * np.cos(theta)
+    
+    # Generate the Gabor patch
+    # Gaussian envelope
+    gauss = np.exp(-0.5 * (x_theta**2 / sigma_x**2 + y_theta**2 / sigma_y**2))
+    # Sine wave grating
+    sine = np.cos(2 * np.pi / wavelength * x_theta + psi)
+    # Combine to form the Gabor patch
+    gabor_patch = gauss * sine
+    
+    return gabor_patch
+
+# --- Example Usage ---
+gabor_data = make_gabor_patch(
+    size=128,          # Image size in pixels
+    sigma=15.0,        # Gaussian standard deviation
+    wavelength=15.0,   # Wavelength of sine wave
+    orientation=45,    # Orientation in degrees (45 for diagonal)
+    phase=0,           # Phase in degrees (0 for cosine phase)
+    gamma=1.0          # Aspect ratio (1 for circular)
+)
+
+# Display the Gabor patch using matplotlib with no interpolation to show raw pixels
+plt.imshow(gabor_data, cmap='gray', interpolation='none')
+plt.axis('off') # Hide axes
+plt.show()
+```
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+
+# Function to create Gabor patch
+def create_gabor(size, sigma, theta, lam, psi, gamma):
+    # Standard Gabor filter formula [14]
+    y, x = np.meshgrid(np.linspace(-1,1,size), np.linspace(-1,1,size))
+    x_theta = x * np.cos(theta) + y * np.sin(theta)
+    y_theta = -x * np.sin(theta) + y * np.cos(theta)
+    
+    gb = np.exp(-.5 * (x_theta**2 + gamma**2 * y_theta**2) / sigma**2) \
+         * np.cos(2 * np.pi * x_theta / lam + psi)
+    return gb
+
+# Animation
+fig, ax = plt.subplots()
+gabor = create_gabor(100, 0.4, 0, 10, 0, 1)
+im = ax.imshow(gabor, cmap='gray', animated=True, vmin=-1, vmax=1)
+
+def update(i):
+    # Update phase to move
+    new_gabor = create_gabor(100, 0.4, 0, 10, i/10.0, 1)
+    im.set_array(new_gabor)
+    return im,
+
+ani = animation.FuncAnimation(fig, update, interval=20)
+plt.show()
+
+```
+

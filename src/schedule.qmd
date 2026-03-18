@@ -71,9 +71,16 @@ We did not meet this week.
 
 ### Wed, Mar 18, 2026
 
+- Continue discussion of @Hadad2015-qd
+  - Deeper dive about gratings and [Gabor patches](2026-03-04-hadad-etal.qmd)
+
 ## Week 11
 
 ### Wed, Mar 25, 2026
+
+- PLAY coding check-in
+- Poster check-in
+- Read and discuss @Blumberg2023-fs and possibly @Blumberg2023-ce
 
 ## Week 12
 
