@@ -49,11 +49,17 @@ title: "Schedule"
 
 ### Wed, Feb 25, 2026
 
-- Read & discuss @Hadad2015-qd
+::: {.callout-warning}
+## Cancelled
+We did not meet this week.
+:::
 
 ## Week 08
 
 ### Wed, Mar 04, 2026
+
+- Read & discuss @Hadad2015-qd
+  - See [companion](2026-03-04-hadad-etal.qmd) Quarto document
 
 ## Week 09
 

@@ -1,0 +1,132 @@
+---
+title: "Discussion of Hadad et al. 2015"
+format: html
+---
+
+## About
+
+This document provides supporting information for the lab group discussion of @Hadad2015-qd.
+
+## Setup
+
+In order to generate images that support the concepts here, we set up a Python environment.
+
+First, we install Python. We only run this once.
+
+```{r}
+#| eval: false
+install.packages("reticulate")
+library(reticulate)
+
+# Installs a standalone Python version managed by reticulate (works cross-platform)
+reticulate::install_python(version = "3.12")
+reticulate::virtualenv_create(
+  envname = "my_python_env",
+  python = "3.12" 
+)
+reticulate::virtualenv_install(
+  envname = "my_python_env", 
+  packages = c("numpy", "matplotlib", "pandas", "scikit-learn")
+)
+```
+
+Each time we render the file, we use the virtual environment we created in the previous step.
+
+```{r}
+reticulate::use_virtualenv("my_python_env", required = TRUE)
+```
+
+## Core question(s)
+
+- Motion perception relates to clinical and development disorders.
+- Motion perception/processing affects other aspect of perception.
+- How does motion perception develop?
+- When is it adult-like?
+- What brain systems process motion?
+
+## Key concepts
+
+- Local vs. global motion
+- Grating stimuli
+
+```{python}
+# Generated from Google AI query 2026-03-04
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+
+def generate_sinusoidal_grating(size, spatial_frequency, angle=0, phase=0):
+    """
+    Generates a sinusoidal grating.
+
+    Args:
+        size (int): The width and height of the square grating in pixels.
+        spatial_frequency (float): The spatial frequency (cycles per pixel, 
+                                   or inverse of wavelength in pixels).
+        angle (float): The orientation of the grating in degrees.
+        phase (float): The phase of the grating in degrees.
+
+    Returns:
+        numpy.ndarray: A 2D array representing the grating.
+    """
+    # Create a grid of coordinates
+    x = np.arange(size)
+    y = np.arange(size)
+    X, Y = np.meshgrid(x, y)
+
+    # Convert angle and phase to radians
+    angle_rad = math.radians(angle)
+    phase_rad = math.radians(phase)
+
+    # Calculate the gradient along the specified angle
+    # This creates a ramp that changes value along the desired orientation
+    gradient = X * math.cos(angle_rad) + Y * math.sin(angle_rad)
+
+    # Apply the sine wave function to the gradient
+    # The result will range between -1 and 1
+    grating = np.sin((2 * math.pi * gradient * spatial_frequency) + phase_rad)
+
+    return grating
+
+# --- Example Usage ---
+# Parameters
+grating_size = 512 # pixels
+frequency = 0.02 # cycles per pixel (e.g. 1 cycle every 50 pixels)
+orientation = 45 # degrees
+start_phase = 90 # degrees
+
+# Generate the grating
+grating_pattern = generate_sinusoidal_grating(
+    grating_size,
+    frequency,
+    orientation,
+    start_phase
+)
+
+# Display the grating using Matplotlib
+plt.imshow(grating_pattern, cmap='gray', vmin=-1, vmax=1)
+plt.title(f"Sinusoidal Grating at {orientation}°")
+plt.axis('off') # Hide axes
+plt.show()
+```
+
+  - A moving grating can yield a Barber Pole illusion:
+  
+  ![@Wikipedia-contributors2025-hv^["By The original uploader was Rokers at English Wikipedia. - Transferred from en.wikipedia to Commons., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1881350"]](https://upload.wikimedia.org/wikipedia/commons/3/39/Barberpole_illusion_animated.gif)
+  
+  - Plaids
+  
+::: {#fig-plaids-ambiguous-not}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WhbZesV2GRk?si=TeA4BPTaGS7Dz6bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+@ricardomartins2016-pt
+:::
+
+- Dot stimuli
+  - Random Dot Kinematograms (RDKs)
+    - [Example](https://databrary.org/volume/49) from Databrary
+
+- Gabor stimuli
+
+
+  
