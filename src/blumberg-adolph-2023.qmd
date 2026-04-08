@@ -1,0 +1,67 @@
+---
+title: "Blumberg & Adolph"
+format: html
+---
+
+## About
+
+This document provides supporting information for our discussion of @Blumberg2023-fs and  @Blumberg2023-ce.
+
+## Concept maps
+
+```{mermaid}
+%%| label: fig-perception
+flowchart TD
+  A["World"] --> B["Body"]
+  B --> C["Brain"]
+```
+
+```{mermaid}
+%%| label: fig-action
+flowchart TD
+  C["Brain"] --> B["Body"]
+  B --> A["World"]
+```
+
+```{mermaid}
+%%| label: fig-perception-action
+flowchart TD
+  A["World"] --> B["Body"]
+  B --> C["Brain"]
+  C --> B
+  B --> A
+```
+
+## Infant
+
+```{mermaid}
+%%| label: fig-infant
+flowchart TD
+  A["World"] --> B["Body"]
+  B --> C["Spinal Cord"]
+  C --> D["Brainstem"]
+  D --> E["Cerebral Cortex"]
+  C --> B
+  D --> B
+  D --> C
+  E -.-> D
+  E -.-> C
+  B --> A
+```
+
+## Adult
+
+```{mermaid}
+%%| label: fig-adult
+flowchart TD
+  A["World"] --> B["Body"]
+  B --> C["Spinal Cord"]
+  C --> D["Brainstem"]
+  D --> E["Cerebral Cortex"]
+  C --> B
+  D -->|"Eye & facial movements, vocal apparatus"| B
+  D --> C
+  E --> D
+  E -->|"fingers & toes"| C
+  B --> A
+```
