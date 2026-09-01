@@ -1,6 +1,6 @@
 ---
 title: "PSYCH 494"
-subtitle: "Gilmore Lab • Spring 2026"
+subtitle: "Gilmore Lab • Fall 2026"
 ---
 
 ## Instructor {-}
@@ -19,7 +19,7 @@ Andrea Seisler \
 
 ## Meeting time & location {-}
 
-Wednesday, 4:00p - 4:50p \
+Tuesday, 8:00a - 8:50a \
 Room 444 Moore Building
 
 ## Expectations

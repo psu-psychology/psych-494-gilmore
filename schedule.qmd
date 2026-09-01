@@ -1,0 +1,76 @@
+---
+title: "Schedule"
+---
+
+## Week 01
+
+**NO LAB MEETING*
+
+## Week 02
+
+### Tue, Sep 01, 2026
+
+- Introductions
+- Lab overview
+  - [Databrary.org](https://databrary.org)
+  - [PLAY Project](https://play-project.org)
+- Homework
+- [Link to mtg minutes](https://gilmore-lab.github.io/lab-meetings.html)
+
+## Week 03
+
+### Tue, Sep 08, 2026
+
+## Week 04
+
+### Tue, Sep 15, 2026
+
+## Week 05
+
+### Tue, Sep 22, 2026
+
+## Week 06
+
+### Tue, Sep 29, 2026
+
+## Week 07
+
+### Tue, Oct 06, 2026
+
+## Week 08
+
+### Tue, Oct 13, 2026
+
+## Week 09
+
+### Tue, Oct 20, 2026
+
+## Week 10
+
+### Tue, Oct 27, 2026
+
+## Week 11
+
+### Tue, Nov 03, 2026
+
+## Week 12
+
+### Tue, Nov 10, 2026
+
+## Week 13
+
+### Tue, Nov 17, 2026
+
+## Thanksgiving
+
+**NO LAB MEETING**
+
+## Week 14
+
+### Tue, Dec 01, 2026
+
+## Week 15
+
+### Tue, Dec 08, 2026
+
+## References

@@ -1,0 +1,78 @@
+---
+title: "scouts"
+format: html
+---
+
+## About
+
+This page summarizes some data cleaning and analyses we did in the Gilmore lab meeting on 2026-04-08.
+
+## Setup
+
+The raw data file is located in `include/csv'. The file name is `TrainedLeader_JVC_497_20260408.csv`.
+
+::: {.callout-important}
+This file contains names and other identifiable information. So, I have added it to a `.gitignore` file so that it is not tracked.
+:::
+
+We load some basic functions.
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+```
+
+## Import
+
+We visually examined the data file first.
+This file had header rows. We deleted them and saved a copy as `scouts-no-header.csv`.
+
+Now, we import the file.
+
+```{r}
+#| label: import-scouts
+
+scouts_df <- readr::read_csv(file = "include/csv/scouts-no-header.csv")
+```
+
+```{r}
+str(scouts_df)
+```
+
+## Questions
+
+1. Who is not trained?
+
+```{r}
+not_trained_df <- scouts_df |>
+  dplyr::filter(Trained == "NO") |>
+  dplyr::arrange(MemberID) |>
+  dplyr::select(-c("Council", "Service_Area", "Sub_District", "Gender_Accepted", "Chartered_Org_Name", "Zip_Code"))
+```
+
+```{r}
+not_trained_df |>
+  kableExtra::kbl()
+```
+
+How many positions per person?
+
+```{r}
+not_trained_count_df <- not_trained_df |>
+  dplyr::group_by(MemberID, Last_Name, First_Name, Email) |>
+  dplyr::summarise(n_pos = dplyr::n()) |>
+  dplyr::arrange(desc(n_pos)) 
+
+readr::write_csv(not_trained_count_df, file = "include/csv/not-trained-count.csv")
+
+not_trained_count_df |>
+  kableExtra::kbl()
+
+not_trained_count_df |>
+  ggplot() +
+  aes(x = n_pos) +
+  geom_histogram() +
+  ggtitle("Histogram of leaders who are missing trainings.")
+```
+

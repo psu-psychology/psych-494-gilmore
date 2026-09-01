@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 psych-494-gilmore.Rproj
+
+/.quarto/
+**/*.quarto_ipynb
