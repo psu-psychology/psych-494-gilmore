@@ -1,0 +1,19 @@
+---
+title: "LLMs"
+author: "Rick Gilmore"
+subtitle: 2025-11-06
+format: revealjs
+---
+
+---
+
+::: {#fig-llms-stanford-engr-video}
+
+<iframe width="1280" height="450" src="https://www.youtube.com/embed/9vM4p9NN0Ts?si=kY0_7IvZHxEA-gtW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+@Unknown2024-et
+:::
+
+# Resources
+
+## References
