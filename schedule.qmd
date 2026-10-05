@@ -4,7 +4,7 @@ title: "Schedule"
 
 ## Week 01
 
-**NO LAB MEETING*
+**NO LAB MEETING**
 
 ## Week 02
 
@@ -35,9 +35,17 @@ title: "Schedule"
 
 ### Tue, Sep 29, 2026
 
+- Continue watching video about LLMs: @Unknown2024-et or
+- Watch: @The-Royal-Institution2025-wu
+  - @UnknownUnknown-gn
+
 ## Week 07
 
 ### Tue, Oct 06, 2026
+
+- Watch PLAY videos
+  - Read: @Soska2021-mh
+  - Review: @SoskaUnknown-pq
 
 ## Week 08
 
