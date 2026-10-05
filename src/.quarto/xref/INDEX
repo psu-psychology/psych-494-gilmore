@@ -1,0 +1,17 @@
+{
+  "index.qmd": {
+    "index.html": "7468b9b1",
+    "index.tex": "b814f21e"
+  },
+  "schedule.qmd": {
+    "schedule.html": "c8802142",
+    "schedule.tex": "b8508d83"
+  },
+  "2025-11-06-autism.qmd": {
+    "2025-11-06-autism.html": "b96a59fb"
+  },
+  "schedule-archive.qmd": {
+    "schedule-archive.html": "242b4232",
+    "schedule-archive.tex": "44c6d863"
+  }
+}

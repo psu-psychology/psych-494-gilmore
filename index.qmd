@@ -32,13 +32,13 @@ Room 444 Moore Building
 
 ## Required Training
 
-- [CITI Training](https://citi.psu.edu/) - every 3 years
-- [Learning Resource Network](https://lrn.psu.edu/) - yearly
-   - [Clery Act Training](https://gilmore-lab.github.io/protocols/training.html#clery-act-training) 
-  - [Reporting Suspected Child Abuse](https://gilmore-lab.github.io/protocols/training.html#reporting-suspected-child-abuse)
-  - [Values, Ethics, & Compliance Training](https://gilmore-lab.github.io/protocols/training.html#values-ethics-and-compliance-training) 
-  - [Title IX Training](https://gilmore-lab.github.io/protocols/training.html#understanding-title-ix-at-penn-state) 
-  - [Data Privacy at Penn State](https://gilmore-lab.github.io/protocols/training.html#data-privacy-at-penn-state)
+- [CITI Training](https://citi.psu.edu/) - retake every 3 years
+- [Learning Resource Network](https://lrn.psu.edu/) 
+   - [Clery Act Training](https://gilmore-lab.github.io/protocols/training.html#clery-act-training) - required once
+  - [Reporting Suspected Child Abuse](https://gilmore-lab.github.io/protocols/training.html#reporting-suspected-child-abuse) - retake every 3 years unless working with children, then yearly
+  - [Values, Ethics, & Compliance Training](https://gilmore-lab.github.io/protocols/training.html#values-ethics-and-compliance-training) - retake yearly
+  - [Title IX Training](https://gilmore-lab.github.io/protocols/training.html#understanding-title-ix-at-penn-state) - required once
+  - [Data Privacy at Penn State](https://gilmore-lab.github.io/protocols/training.html#data-privacy-at-penn-state) - required once
 - Background Check (only if collecting data on minors)
 
 <!-- ## References -->
